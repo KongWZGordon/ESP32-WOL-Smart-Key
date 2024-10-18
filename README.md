@@ -37,7 +37,8 @@
 - [测试使用环境与设备](#测试使用环境与设备)
 - [使用文档](#使用文档)
   - [Arduino配置](#Arduino配置)
-  - [巴法云注册&密钥获取](#巴法云注册)
+  - [巴法云注册&密钥获取](#巴法云注册密钥获取)
+  - [PTX开关MAC地址获取](#PTX开关MAC地址获取)
   - [烧录代码](#烧录代码)
   - [接入语音助手](#接入语音助手)
     
@@ -78,18 +79,11 @@
 2. 记录好用户私钥(页面左上)以及刚才的名字，后续配置需要用到。
 
 #### **PTX开关MAC地址获取**
-> 两种方法任选其一即可，**完成这一步后请将按钮配网**
-##### 方法一 通过Xiaomi Cloud Tokens Extractor获取
-1. 获取的方式多样，这里推荐使用Github上另一个项目——[Xiaomi Cloud Tokens Extractor](https://github.com/PiotrMachowski/Xiaomi-cloud-tokens-extractor/)进行，优点是不需要自己去抓包筛选，登录就可以看到设备相关信息。
+1. 这里推荐使用Github上另一个项目——[Xiaomi Cloud Tokens Extractor](https://github.com/PiotrMachowski/Xiaomi-cloud-tokens-extractor/)进行，登录就可以看到设备相关信息。
 2. 使用米家app按照官方的教程对按键进行配网，这一步即使没有网关也可以进行。
 3. 成功后打开Extractor，输入绑定按钮的账号密码登录，会发现`PTX wireless switch(bluetooth version)`的设备其中`MAC`便是我们需要的，记录其地址。
    ![](./Pics/extrator.png)
 
-##### 方法二 通过BLE扫描获取
-1. 你也可以通过BLE设备调试软件扫描获取，例如[nRF Coonnect安卓版](https://play.google.com/store/apps/details?id=no.nordicsemi.android.mcp&hl=en_US)
-   > 如**已经配网**请注意：配网后的蓝牙只会在按下一刻开启，非常难以捕捉。如果你已经配网，又不想重新配一次，可以尝试打开`nRF Coonnect`的扫描状态，按几下按钮，然后在列表里寻找包含`remote.btsw`字眼的设备（详见第三步）。
-2. 根据[PTX官方说明书](https://home.mi.com/views/introduction.html?model=090615.remote.btsw1&region=cn)，快按3下再长按5秒直到开关指示灯变闪烁，使开关进入配网状态。
-3. **配网状态下**，设备的蓝牙是可见的状态。打开`nRF Coonnect`，你可以轻松地找到包含`remote.btsw`字眼的设备，记录下它的MAC地址。
 
 #### **烧录代码**
 1. 根据注释内容的及提示修改此部分代码：
