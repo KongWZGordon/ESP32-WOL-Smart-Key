@@ -5,7 +5,7 @@
 
 <p align="center">
   <a href="https://github.com/shaojintian/Best_README_template/">
-    <img src="pics/logo.png" alt="Logo" width="80" height="80">
+    <img src="Pics/logo.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">"一键"掌控你的电脑</h3>
