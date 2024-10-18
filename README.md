@@ -1,5 +1,16 @@
 # 适用于笔记本的远程开机按钮
+
 使用Esp32实现使用小爱同学和ptx开关实现远程、本地的笔记本开关机操作，无需拆机无损改造。
+
+<!-- PROJECT SHIELDS -->
+
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
+
 <!-- PROJECT LOGO -->
 <br />
 <br />
