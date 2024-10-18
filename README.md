@@ -1,6 +1,26 @@
 # 适用于笔记本的远程开机按钮
-
 使用Esp32实现使用小爱同学和ptx开关实现远程、本地的笔记本开关机操作，无需拆机无损改造。
+<!-- PROJECT LOGO -->
+<br />
+
+<p align="center">
+  <a href="https://github.com/shaojintian/Best_README_template/">
+    <img src="pics/logo.png" alt="Logo" width="80" height="80">
+  </a>
+
+  <h3 align="center">"一键"掌控你的电脑</h3>
+  <p align="center">
+    一个为你电脑加上快捷按键并接入智能家居平台的项目！
+    <br />
+    <a href="https://github.com/KongWZGordon/WOL-Remote-Button-Base-on-ESP32"><strong>探索本项目的文档 »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/KongWZGordon/WOL-Remote-Button-Base-on-ESP32/issues">报告Bug</a>
+    ·
+    <a href="https://github.com/KongWZGordon/WOL-Remote-Button-Base-on-ESP32/issues">提出新特性</a>
+  </p>
+
+</p>
 
 ## 项目实现功能
 
