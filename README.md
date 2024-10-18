@@ -73,10 +73,9 @@
 #### **巴法云注册&密钥获取**
 1. 通过官网注册一个账号并打开控制台界面
    ![](./Pics/bafa.png)
-   + 选择到mqtt设备云
-   + 随便起一个以001结尾的名字（001用于识别系统类型必须在末尾带有，[详见文档](https://cloud.bemfa.com/docs/src/speaker_mi.html)）
-
-2. 记录好用户私钥(页面左上)以及刚才的名字，后续配置需要用到。
+   
+2. 选择到`mqtt设备云`，随便起一个以001结尾的名字（001用于识别系统类型必须在末尾带有，[详见文档](https://cloud.bemfa.com/docs/src/speaker_mi.html)）
+3. 记录好用户私钥(页面左上)以及刚才的名字，后续配置需要用到。
 
 #### **PTX开关MAC地址获取**
 1. 这里推荐使用Github上另一个项目——[Xiaomi Cloud Tokens Extractor](https://github.com/PiotrMachowski/Xiaomi-cloud-tokens-extractor/)进行，登录就可以看到设备相关信息。
