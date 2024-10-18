@@ -27,8 +27,11 @@
     <a href="https://github.com/KongWZGordon/ESP32-WOL-Smart-Key/issues">报告Bug</a>
     ·
     <a href="https://github.com/KongWZGordon/ESP32-WOL-Smart-Key/issues">提出新特性</a>
+    ·
+    <a href="https://github.com/KongWZGordon/ESP32-WOL-Smart-Key/README-eng">Switch to English</a>
   </p>
-
+<br />
+<br />
 </p>
 
 ## 使用文档
