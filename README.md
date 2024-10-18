@@ -2,7 +2,7 @@
 使用Esp32实现使用小爱同学和ptx开关实现远程、本地的笔记本开关机操作，无需拆机无损改造。
 <!-- PROJECT LOGO -->
 <br />
-
+<br />
 <p align="center">
   <a href="https://github.com/shaojintian/Best_README_template/">
     <img src="Pics/logo.png" alt="Logo" width="80" height="80">
