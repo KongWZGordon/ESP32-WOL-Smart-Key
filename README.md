@@ -23,7 +23,7 @@
   <p align="center">
     一个为你电脑加上快捷按键并接入智能家居平台的项目！
     <br />
-    <a href="https://github.com/KongWZGordon/WOL-Remote-Button-Base-on-ESP32"><strong>探索本项目的文档 »</strong></a>
+    ✅ 小爱同学语音开机 ✅ 远程开机 ✅ 使用智能按钮开机 ✅ 长按、双击动作识别 ✅ 关机 ✅ 小爱查询状态
     <br />
     <br />
     <a href="https://github.com/KongWZGordon/WOL-Remote-Button-Base-on-ESP32/issues">报告Bug</a>
