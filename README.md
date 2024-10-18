@@ -1,6 +1,6 @@
 # 适用于笔记本的远程开机按钮
 
-使用Esp32实现使用小爱同学和ptx开关实现远程、本地的笔记本开关机操作，无需拆机无损改造。
+使用Esp32实现远程、本地的笔记本开关机操作，无需拆机无损改造，并通过巴法云接入智能家居平台，实现小爱同学、天猫精灵、小度等智能设备远程控制。
 
 <!-- PROJECT SHIELDS -->
 
@@ -122,12 +122,12 @@
 
 <!-- links -->
 [your-project-path]:shaojintian/Best_README_template
-[contributors-shield]: https://img.shields.io/github/contributors/shaojintian/Best_README_template.svg?style=flat-square
-[contributors-url]: https://github.com/shaojintian/Best_README_template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/shaojintian/Best_README_template.svg?style=flat-square
-[forks-url]: https://github.com/shaojintian/Best_README_template/network/members
-[stars-shield]: https://img.shields.io/github/stars/shaojintian/Best_README_template.svg?style=flat-square
-[stars-url]: https://github.com/shaojintian/Best_README_template/stargazers
+[contributors-shield]: https://img.shields.io/github/contributors/KongWZGordon/WOL-Remote-Button-Base-on-ESP32.svg?style=flat-square
+[contributors-url]: https://github.com/KongWZGordon/WOL-Remote-Button-Base-on-ESP32/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/KongWZGordon/WOL-Remote-Button-Base-on-ESP32.svg?style=flat-square
+[forks-url]: https://github.com/KongWZGordon/WOL-Remote-Button-Base-on-ESP32/network/members
+[stars-shield]: https://img.shields.io/github/stars/KongWZGordon/WOL-Remote-Button-Base-on-ESP32.svg?style=flat-square
+[stars-url]: https://github.com/KongWZGordon/WOL-Remote-Button-Base-on-ESP32/stargazers
 [issues-shield]: https://img.shields.io/github/issues/shaojintian/Best_README_template.svg?style=flat-square
 [issues-url]: https://img.shields.io/github/issues/shaojintian/Best_README_template.svg
 [license-shield]: https://img.shields.io/github/license/shaojintian/Best_README_template.svg?style=flat-square
