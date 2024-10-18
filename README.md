@@ -16,8 +16,7 @@
   <a href="https://github.com/KongWZGordon/ESP32-WOL-Smart-Key/">
     <img src="Pics/logo.png" alt="Logo" width="80" height="80">
   </a>
-
-  <h3 align="center">"一键"掌控你的电脑</h3>
+  <h3 align="center">“一键” 掌控你的电脑</h3>
   <p align="center">
     一个为你电脑加上快捷按键并接入智能家居平台的项目！
     <br />
@@ -32,18 +31,18 @@
 
 </p>
 
-## 目录
+## 使用文档
 
 - [测试使用环境与设备](#测试使用环境与设备)
-- [使用文档](#使用文档)
+- [基础功能配置](#基础功能配置)
   - [Arduino配置](#Arduino配置)
   - [巴法云注册&密钥获取](#巴法云注册密钥获取)
   - [PTX开关MAC地址获取](#PTX开关MAC地址获取)
   - [烧录代码](#烧录代码)
   - [接入语音助手](#接入语音助手)
-    
+- [进阶配置](#进阶配置)    
 
-由于米家无法支持个人开发者，因此本项目的小爱同学互联使用[巴法云](https://bemfa.com/)实现，智能按键控制不经过米家，直接通过ESP处理蓝牙广播包。目前只发现了这种方法，后续有更好的实现方式再迭代。
+由于作者使用米家生态，因此本项目的互联功能以接入米家为例。但是，智能按键控制不经过米家，直接通过ESP处理蓝牙广播包，因此语音控制使用其他平台并不会影响其功能。
 
 ### 测试使用环境与设备
 + [ESP32WROOM32](https://www.espressif.com.cn/sites/default/files/documentation/esp32-wroom-32_datasheet_cn.pdf)
@@ -52,9 +51,9 @@
 + [PTX 无线开关（蓝牙版）](https://home.mi.com/webapp/content/baike/product/index.html?model=090615.remote.btsw1)
 
 
-### 使用文档
+### 基础功能配置
 
-> 本项在互联方面涉及使用第三方平台，不能保证其代码和实现方式长期有效。
+> 完成基础功能的配置，可以实现：语音远程开机、按钮单击开机。其他功能依赖于电脑端程序，使用前请进一步完成[进阶配置](#进阶配置)。本项在互联方面涉及使用第三方平台，不能保证其代码和实现方式长期有效。
 
 #### **Arduino配置**
 1. 针对如何配置Arduino环境以及连接ESP32开发板的具体操作，这里暂且掠过。需要注意的是，**默认配置下同时涉及蓝牙和Wifi相关的库，会让编译出现超出储存大小的报错**：
@@ -93,24 +92,36 @@
    const char *ssid = "这里填写WiFi名字";          // 你的Wifi名字
    const char *password = "这里填写WiFi密码";  // 你的Wifi密码
    const char *MACAddress = "XX:XX:XX:XX:XX:XX"; // 电脑设备的MAC地址
+   const char *udpIP = "xxx.xxx.xxx.xxx";  // 替换为你电脑IP地址
    String targetMac = "XX:XX:XX:XX:XX:XX";  // PTX设备的MAC地址
    /*===========================⇧ ⇧ ⇧ 这部分是需要修改的信息 ⇧ ⇧ ⇧================================*/
    ```
 
 2. 完成后可以尝试烧录。
-3. 烧录完成后，此时按动PTX开关应该会有蓝灯闪烁两下。同时打开巴法云的[控制台](https://cloud.bemfa.com/tcp/devicemqtt.html)，应该可以看到设备上线状态。
+3. 烧录完成后，此时按动PTX开关应该ESP会有蓝灯闪烁。同时打开巴法云的[控制台](https://cloud.bemfa.com/tcp/devicemqtt.html)，应该可以看到设备上线状态。
 
 #### **接入语音助手**
 
+1. 打开`米家APP` > 我的 > 添加其他平台 > 在列表中选择`巴法云`。登录上面步骤中的巴法平台账号并同步设备。
 
+2. 返回`米家APP` > 我的 > 添加其他平台 页面，此时应看到已连接列表中多出了巴法云，点进去可以看到电脑设备。
+
+   > 注意：首页是看不到第三方平台设备的，因此如果你想要添加`手动控制，需要借助音箱设备另辟蹊径（自行搜索）。
+
+### 进阶配置
+   > 电脑端软件仍处于开发中状态，部分功能并未实现，日后将逐步完善。
+1. 打开电脑端程序，进入`设备信息`页面。
+2. 点击绑定设备，并输入ESP-32的IP地址（可以在路由器上查询，或者在ESP-32启动时，通过串口日志获取）。
+3. 绑定成功后，应该可以在首页看到连接状态提示框变为`已连接（绿色标识）`。
 
 <!-- links -->
-[your-project-path]:shaojintian/Best_README_template
-[contributors-shield]: https://img.shields.io/github/contributors/KongWZGordon/WOL-Remote-Button-Base-on-ESP32.svg?style=flat-square
-[contributors-url]: https://github.com/KongWZGordon/WOL-Remote-Button-Base-on-ESP32/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/KongWZGordon/WOL-Remote-Button-Base-on-ESP32.svg?style=flat-square
-[forks-url]: https://github.com/KongWZGordon/WOL-Remote-Button-Base-on-ESP32/network/members
-[stars-shield]: https://img.shields.io/github/stars/KongWZGordon/WOL-Remote-Button-Base-on-ESP32.svg?style=flat-square
-[stars-url]: https://github.com/KongWZGordon/WOL-Remote-Button-Base-on-ESP32/stargazers
-[issues-shield]: https://img.shields.io/github/issues/KongWZGordon/WOL-Remote-Button-Base-on-ESP32.svg?style=flat-square
-[issues-url]: https://img.shields.io/github/issues/KongWZGordon/WOL-Remote-Button-Base-on-ESP32.svg
+
+[your-project-path]:KongWZGordon/ESP32-WOL-Smart-Key
+[contributors-shield]: https://img.shields.io/github/contributors/KongWZGordon/ESP32-WOL-Smart-Key.svg?style=flat-square
+[contributors-url]: https://github.com/KongWZGordon/ESP32-WOL-Smart-Key/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/KongWZGordon/ESP32-WOL-Smart-Key.svg?style=flat-square
+[forks-url]: https://github.com/KongWZGordon/ESP32-WOL-Smart-Key/network/members
+[stars-shield]: https://img.shields.io/github/stars/KongWZGordon/ESP32-WOL-Smart-Key.svg?style=flat-square
+[stars-url]: https://github.com/KongWZGordon/ESP32-WOL-Smart-Key/stargazers
+[issues-shield]: https://img.shields.io/github/issues/KongWZGordon/ESP32-WOL-Smart-Key.svg?style=flat-square
+[issues-url]: https://img.shields.io/github/issues/KongWZGordon/ESP32-WOL-Smart-Key.svg
