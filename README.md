@@ -9,10 +9,11 @@
     ✅ 远程开机
     ✅ 使用智能按钮开机
     ✅ 长按、双击动作识别
+    ✅ 关机
+    ✅ 小爱查询状态
 - 不完全&未实现
     ⚠️ 从睡眠模式唤醒（理论上是网卡驱动问题）
-    ⛔ 关机
-    ⛔ 状态查询
+    ⛔ 自定义动作组
 + Bugs
     ⚠️ 不定时的崩溃
     
@@ -45,17 +46,6 @@
 
    注意将`PubSubClient.h`与`PubSubClient.cpp`放到`*.ino`相同的目录底下，[相关文件](https://cloud.bemfa.com/zip/8266/Bemfa_MQTT.zip)可以在巴法云获取。
    
-3. 调用Wifi和蓝牙相关以及[WOL唤醒](https://github.com/a7md0/WakeOnLan)的库
-   ```cpp
-   #include <BLEDevice.h>
-   #include <BLEUtils.h>
-   #include <BLEScan.h>
-   #include <BLEAdvertisedDevice.h>
-   #include <WiFi.h>
-   //⇩⇩⇩ For WOL ⇩⇩⇩
-   #include <WakeOnLan.h>
-   #include <WiFiUdp.h>
-   ```
 ### 巴法云注册&密钥获取
 1. 通过官网注册一个账号并打开控制台界面
    ![](./Pics/bafa.png)
