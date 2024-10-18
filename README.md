@@ -50,7 +50,7 @@
 ### 测试使用环境与设备
 + [ESP32WROOM32](https://www.espressif.com.cn/sites/default/files/documentation/esp32-wroom-32_datasheet_cn.pdf)
 + 笔记本电脑（Realtek RTL8118AS）
-+ Winodws 11 23H2
++ Winodws 11 24H2
 + [PTX 无线开关（蓝牙版）](https://home.mi.com/webapp/content/baike/product/index.html?model=090615.remote.btsw1)
 
 
