@@ -12,12 +12,12 @@
 #include <stdio.h>
 
 /*===========================⇩ ⇩ ⇩ 这部分是需要修改的信息 ⇩ ⇩ ⇩================================*/
-#define MQTT_ID  "ef91e64ff4374424ba2b657f49b2236f"  // 巴法云私钥
-const char *ssid = "Xiaomi_2AC2";  // WiFi名字
-const char *password = "Thisiswifipw";  // WiFi密码
-const char *MACAddress = "BC:0F:F3:D8:2F:F3";  // PC设备的MAC地址
-const char* keyHex = "ceb64fbef48921a94c61bda494b5570a";  // BLE Key
-const char *targetMac = "a4:c1:38:1a:80:31";  // 目标设备的MAC地址
+#define MQTT_ID  "xxxx"  // 巴法云私钥
+const char *ssid = "xxxx";  // WiFi名字
+const char *password = "xxxx";  // WiFi密码
+const char *MACAddress = "xx:xx:xx:xx:xx:xx";  // PC设备的MAC地址
+const char* keyHex = "xxxxxxxxxx";  // BLE Key
+const char *targetMac = "xx:xx:xx:xx:xx:xx";  // 目标设备的MAC地址
 /*===========================⇧ ⇧ ⇧ 这部分是需要修改的信息 ⇧ ⇧ ⇧================================*/
 
 
